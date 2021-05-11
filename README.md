@@ -58,7 +58,7 @@
 ```
 -------------------------------
 ## Implementation:
-1)In a virutal environment, you should install django and create a django project. (python mamage.py startproject) <br />
+1)In a virutal environment, you should install django and create a django project. (python manage.py startproject) <br />
 2) you will need to install the following dependencies before you can run the service: django, tensorflow, scikit-learn, pandas, mysql-connector-python,
 mysqlclient, datetime, rest_framework, apscheduler, yahoo_fin.<br />
 3) *You need to make a mysql server to which the project is connected and the connections have to be made like the way described in the report.<br />
