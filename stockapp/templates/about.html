@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About SuperStonks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <style type="text/css">
+        body {
+        background: url(https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+        position: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      h1 {
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
+
+      
+      .container {
+        text-align: justify;
+        color: white;
+      }
+    .sample{
+        color: #c593f5;
+    }
+      
+
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-dark navbar-inverse">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          
+            <a class="navbar-brand" href="{% url 'My-Home' %}"><i class="fas fa-arrow-circle-left"></i> Back to Home</a>
+          
+        </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center sample">About SuperStonks</h1>
+        <p class="sample">
+            SuperStonks is an application which aims at helping people make better investment decisions in the
+            stock market. It not only assists experienced traders, but also beginners to the stock market by
+            providing information on basic stock concepts and investment guidance.
+        </p>
+        <p class="sample">We provide services for the ten stocks listed as below.</p>
+         <ol>
+            {% for i in stocks %}
+            <li><a>{{ i.ticker }}</a></li>
+            {% endfor %}
+        </ol> 
+
+        <p class="sample">
+            You can analyze the stock price trends for each of these stocks. Not only can you analyze the
+            trends, but you can also receive accurate short-term and long-term stock price predictions for
+            each of these stocks.
+        </p>
+        <p class="sample">
+            We have incorporated Machine Learning algorithms into our application to predict future trends
+            in the stock market. So, using this application gives you the advantage of staying ahead in the
+            game compared to your fellow traders and in turn helps you in gaining profits.
+            By becoming a member on our website, you are guaranteed to feel like you have a partner or
+            friend who consistently guides you in making better investment decisions.</p>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
