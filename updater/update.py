@@ -12,7 +12,7 @@ stocks = ['AAPL', 'AMZN', 'FB', 'GOOGL', 'NFLX', 'TSLA', 'TWTR', 'YELP', 'VAC', 
 mydb = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    passwd="guruji1234",
+    passwd="*********",
     database="SuperStonks",
     buffered=True,
     

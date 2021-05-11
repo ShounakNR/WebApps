@@ -13,7 +13,7 @@ def get_long_term(stock, no_of_days):
     mydb = mysql.connector.connect(
         host="127.0.0.1",
         user="root",
-        passwd="guruji1234",
+        passwd="*******",
         database="SuperStonks",
         buffered=True,
     )  
