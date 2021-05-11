@@ -61,14 +61,14 @@
 1)In a virutal environment, you should install django and create a django project. (python mamage.py startproject) <br />
 2) you will need to install the following dependencies before you can run the service: django, tensorflow, scikit-learn, pandas, mysql-connector-python,
 mysqlclient, datetime, rest_framework, apscheduler, yahoo_fin.<br />
-#### 3) You need to make a mysql server to which the project is connected and the connections have to be made like the way described in the report.<br />
+3) *You need to make a mysql server to which the project is connected and the connections have to be made like the way described in the report.<br />
 4) Create an app in the project called stockapp (using python manage.py startapp stockapp). Copy paste all these files in the exact same file structure in your virtual environment. please make sure the manage.py, setting.py are the same as in the project<br />
 5) run the server using python manage.py runserver
-6) you can populate the mysql using the data from the .csv files in here. If you need to create the Tables in the database you can use the SQL queries written below.
+6) you can populate the mysql using the data from the .csv files in here. If you need to create the Tables in the database you can use the SQL queries written below.<br />
 CREATE TABLE stocks (
 sid INT PRIMARY KEY,
 ticker VARCHAR(10)
-);
+); <br />
 
 CREATE TABLE historical (
 sid INT,
@@ -80,7 +80,7 @@ close_value FLOAT,
 volume INT,
 PRIMARY KEY (sid, dat),
 FOREIGN KEY (sid) REFERENCES Stocks (sid)
-);
+);<br />
 
 CREATE TABLE realtime (
 sid INT,
